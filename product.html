@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cay Van Phong</title>
+    <link rel="stylesheet" href="/assets/css/officetrees.css">
+    <script src="https://kit.fontawesome.com/7a3d8c217d.js"></script>
+    <script src="https://kit.fontawesome.com/e06076012c.js" crossorigin="anonymous"></script>
+    <link rel="js" href="javascript/jquery-3.6.0.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/javascript/angular.min.js"></script>
+    <script src="/javascript/jquery-3.6.0.min.js"></script>
+    <script src="/javascript/global.js"></script>
+    <script src="/javascript/sanpham_web.js"></script>
+</head>
+
+<body ng-app="AppCayCanh" ng-controller="SanPhamController">
+    <header>
+        <div class="container">
+            <div class="header-task">
+                <div class="header-task-left">
+                    <div class="logo">
+                        <a href="/html/main.html"><img src="/assets/img/LOGO-Web.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="header-task-center">
+                    <form action="" class="search-bar">
+                        <input type="text" placeholder="Tìm kiếm" name="q">
+                        <div class="btn-search" ><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></div>
+                    </form>
+                </div>
+                <div class="header-task-right">
+                    <div class="login" id="login-open">
+                        <a href="login.html">
+                            <i class="fa-solid fa-user" style="color: #000000;"></i>
+                            <h5>Tài khoản</h5>
+                        </a>  
+                    </div>  
+                    <div class="cart">
+                        <a href="">
+                            <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>
+                            <h5>Giỏ hàng</h5>
+                        </a>
+                        <span>0</span>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="header-nav">
+                <ul class="main-menu">
+                    <li><a href="main.html">Trang Chủ </a></li>
+                    <li><a href="trees.html">Cây Cảnh 
+                        <i class="fa-solid fa-chevron-down" style="color: rgba(255, 255, 255, 0.7);"></i>
+                        </a>
+                        <ul class="sub-menu1">
+                            <li><a href="#">Cây Văn Phòng</a></li>
+                            <li><a href="">Cây Để Bàn</a></li>
+                            <li><a href="">Cây Phong Thủy</a></li>
+                            <li><a href="">Cây Nội Thất</a></li>
+                            <li><a href="">Xương Rồng</a></li>
+                            <li><a href="">Sen Đá</a></li>
+                            <li><a href="">Cây Thủy Sinh</a></li>
+                            <li><a href="">Cây Ngoại Thất</a></li>
+                            <li><a href="">Cây Ban Công</a></li>
+                            <li><a href="">Cây Dây Leo</a></li>
+                            <li><a href="">Hoa</a></li>
+                            <li><a href="">Cây Công Trình</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Chậu Trồng Cây
+                        <i class="fa-solid fa-chevron-down" style="color: rgba(255, 255, 255, 0.7);"></i>
+                        </a>
+                        <ul class="sub-menu1">
+                            <li><a href="">Chậu Gốm Sứ</a></li>
+                            <li><a href="">Chậu Nhựa</a></li>
+                            <li><a href="">Bình Thủy Tinh</a></li>
+                            <li><a href="">Chậu Composite</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Phụ Kiện Tiểu Cảnh
+                        <i class="fa-solid fa-chevron-down" style="color: rgba(255, 255, 255, 0.7);"></i>
+                        </a>
+                        <ul class="sub-menu1">
+                            <li><a href="">Tượng Phong Thủy</a></li>
+                            <li><a href="">Con Người</a></li>
+                            <li><a href="">Kiến Trúc</a></li>
+                            <li><a href="">Động Vật</a></li>
+                            <li><a href="">Các Loại Khác</a></li>
+                            <li><a href="">Vật Tư Ngành Cây</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Kiến Thức Cây Cảnh
+                        <i class="fa-solid fa-chevron-down" style="color: rgba(255, 255, 255, 0.7);"></i>
+                        </a>
+                        <ul class="sub-menu1">
+                            <li><a href="">Chăm Sóc Cây Cảnh</a></li>
+                            <li><a href="">Nội Thất - Sân Vườn</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Quà Tặng Cây Xanh</a></li>
+                    <li><a href="">Phong Thủy
+                        <i class="fa-solid fa-chevron-down" style="color: rgba(255, 255, 255, 0.7);"></i>
+                        </a>
+                        <ul class="sub-menu1">
+                            <li><a href="">Cây Hợp Mệnh</a></li>
+                            <li><a href="">Cây Hợp Tuổi</a></li>
+                            <li><a href="">Cây Hợp Cung Hoàng Đạo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Dịch Vụ
+                        <i class="fa-solid fa-chevron-down" style="color: rgba(255, 255, 255, 0.7);"></i>
+                        </a>
+                        <ul class="sub-menu1 last-submenu">
+                            <li><a href="">Cho Thuê Cây Xanh</a></li>
+                            <li><a href="">Thay Chậu Và Đất Trồng</a></li>
+                            <li><a href="">Thi Công Tiểu Cảnh Sân Vườn</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+     
+    <main>
+        <div class="container">
+            <div class="tittle">
+                <div class="path">
+                    <p>
+                        <a href="main.html">Trang chủ  </a> 
+                        <span>/</span> 
+                        <a href="product.html">Sản phẩm </a> 
+                        <span>/</span>
+                        <a href="trees.html" class="pathname">Cây cảnh </a>
+                    </p>
+                </div>
+
+                <div class="searchresult-wrap">
+                    <div class="result">
+                        <p style="color: rgba(0, 0, 0, 0.7);">Hiển thị 1-12 của 150 kết quả</p>
+                    </div>
+
+                    <div class="dropdown-select">
+                        <div class="select-btn">
+                            <span class="dropdown-text">Thứ tự mặc định</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ul class="list-dropdown">
+                            <li><a href="" class="first-select">Thứ tự mặc định</a></li>
+                            <li><a href="">Thứ tự theo mức độ phổ biến</a></li>
+                            <li><a href="">Mới nhất</a></li>
+                            <li><a href="">Thứ tự theo giá: thấp đến cao</a></li>
+                            <li><a href="">Thứ tự theo giá: cao xuống thấp</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">   
+                <div class="content-category">
+                    <h3>Danh mục sản phẩm</h3>
+                    <hr>
+                    <div class="list-category">
+                        <div class="category-wrap-menu">
+
+                            <a href="">Cây Cảnh </a>
+                            
+                            <i class="fa-solid fa-chevron-down dropdown-menu1" ></i>
+                            <div class="sub-category">
+                                <div class="line"></div>
+                                <ul class="category1">
+                                    <li class="dropdown-item"><a href="">Cây Dây Leo</a></li>
+                                    <li class="dropdown-item"><a href="">Cây Ban Công</a></li>
+                                    <li class="dropdown-item"><a href="">Cây Văn Phòng</a></li>
+                                    <li class="dropdown-item"><a href="">Cây Để Bàn</a></li>
+                                    <li class="dropdown-item"><a href="">Cây Phong Thủy</a></li>
+                                    <li class="dropdown-item"><a href="">Cây Nội Thất</a></li>
+                                    <li class="dropdown-item"><a href="">Cây Thủy Sinh</a></li>
+                                    <li class="dropdown-item"><a href="">Cây Ngoại Thất</a></li>
+                                    <li class="dropdown-item"><a href="">Hoa</a></li>
+                                    <li class="dropdown-item"><a href="">Cây Công Trình</a></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="category-wrap">
+                            <a href="">Sen Đá</a>
+                        </div>
+                        <div class="category-wrap">
+                            <a href="">Xương Rồng</a>
+                        </div>
+                        <div class="category-wrap-menu">
+                            <a href="">Chậu Trồng Cây </a>
+                            <i class="fa-solid fa-chevron-down dropdown-menu2"></i>
+                            <div class="sub-category">
+                                <div class="line"></div>
+                                <ul class="category2">
+                                    <li class="dropdown-item"><a href="">Bình Thủy Tinh</a></li>
+                                    <li class="dropdown-item"><a href="">Chậu Gốm Sứ</a></li>
+                                    <li class="dropdown-item"><a href="">Chậu Nhựa</a></li>
+                                    <li class="dropdown-item"><a href="">Chậu Composite</a></li>
+                                </ul>
+                            </div>  
+                        </div>
+                        <div class="category-wrap-menu">
+                            <a href="">Phụ Kiện Tiểu Cảnh </a>
+                            <i class="fa-solid fa-chevron-down dropdown-menu3"></i>
+                            <div class="sub-category">
+                                <div class="line"></div>
+                                <ul class="category3">
+                                    <li class="dropdown-item"><a href="">Tượng Phong Thủy</a></li>
+                                    <li class="dropdown-item"><a href="">Con Người</a></li>
+                                    <li class="dropdown-item"><a href="">Kiến Trúc</a></li>
+                                    <li class="dropdown-item"><a href="">Động Vật</a></li>
+                                    <li class="dropdown-item"><a href="">Các Loại Khác</a></li>
+                                </ul>
+                            </div>                          
+                        </div>
+
+                        <div class="category-wrap">
+                            <a href="">Vật Tư Nghành Cây</a>
+                        </div>
+                        
+                    </div>
+                </div>
+    
+                <div class="list-product-wrap">
+                    <div class="list-product" >
+                        <div class="product" ng-repeat="sp in listsp">
+                            <div class="product-img">
+                                <a href="">
+                                    <img ng-src="{{sp.anhsanpham}}" alt="" class="img1">
+                                </a>                 
+                            </div>
+                            <div class="product-info">
+                                <p>{{sp.tendanhmuc}}</p>
+                                <a href="">{{sp.tensanpham}}</a>
+                                <p>Gia chi tu:<span>{{sp.gia}}₫</span></p>
+                                <button class="addcart">
+                                    <i class="fa-solid fa-cart-plus" style="color: #21f00a;"></i>
+                                </button>  
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="page-number">
+                        <div class="number"><a href="">1</a></div>
+                        <div class="number"><a href="">2</a></div>
+                        <div class="number"><a href="">3</a></div>
+                        <div class="number"><a href="">4</a></div>
+                        <div class="number"><a href="">...</a></div>
+                        <div class="number"><a href="">11</a></div>
+                        <div class="number"><a href="">12</a></div>
+                        <div class="number"><a href="">13</a></div>
+                        <div class="number"><a href="">></a></div>
+                    </div>
+                </div>
+               
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="intro">
+                <h3>Về chúng tôi</h3>
+                <p> <span>Là một trong số hệ thống cửa hàng của Công ty TNHH MTV Cây cảnh Hà Nội. 
+                    <a href="">Cây cảnh online</a></span> chuyên cung cấp các loại cây văn phòng, cây để bàn, cây phong thủy, cây nội thất, phụ kiện tiểu cảnh, các loại chậu trồng cây, 
+                    cho thuê cây, thi công tiểu cảnh sân vườn....</p>
+                <div class="follow">
+                    <p>Follow Us</p>
+                    <a href="" style="text-decoration: none;">
+                        <div class="icon" style="background-color: #365899;">
+                            <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
+                        </div>
+                    </a>
+                    <a href="" style="text-decoration: none;">
+                        <div class="icon" style="background-color: #4C68D7;">
+                            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                        </div>
+                    </a>
+                    <a href="" style="text-decoration: none;">
+                        <div class="icon" style="background-color: #1DA1F2;">
+                            <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                        </div>
+                    </a>
+                    <a href="" style="text-decoration: none;">
+                        <div class="icon" style="background-color: #000000;">
+                            <i class="fa-regular fa-envelope" style="color: #ffffff;"></i>
+                        </div>
+                    </a>
+                    <a href="" style="text-decoration: none;">
+                        <div class="icon" style="background-color: #FF0000;">
+                            <i class="fa-brands fa-pinterest" style="color: #ffffff;"></i>
+                        </div>
+                    </a>
+                    <a href="" style="text-decoration: none;">
+                        <div class="icon" style="background-color: #0077B5" >
+                            <i class="fa-brands fa-linkedin"  style="color: #ffffff;"></i>
+                        </div>
+                    </a>
+                    <a href="" style="text-decoration: none;">
+                        <div class="icon" style="background-color: #CC0000;">
+                            <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="fanpage">
+                <h3>Fanpage Facebook</h3>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCayCanhOnline.vn%2F%3Fref%3Dembed_page&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <ul>
+                    <li><a href="">Hướng dẫn mua hàng và thanh toán</a></li>
+                    <li><a href="">Chính sách bảo hành và đổi trả</a></li>
+                </ul>
+            </div>
+
+            <div class="inbox">
+                <h3>Liên hệ</h3>
+                <strong>Công ty TNHH MTV Cây cảnh Hà Nội - Chi Nhánh Vạn Phúc</strong> <br>
+
+                    <strong>Địa chỉ: <a href="">C6 Khu đất đấu giá Vạn Phúc, Đường Lê Văn Tám - Cổng chợ cây cảnh  Vạn Phúc, Hà Đông, Hà Nội </a>
+                        (Ngõ 134 Vạn Phúc - ngã tư đầu tiên rẽ phải)
+                    </strong>  <br>
+                    <strong>Hotline:
+                        <a href="">0988004490</a> -  <a href="">0822004490</a>
+                    </strong>   <br>
+                    
+                    <strong>Email:
+                        <a href="">caycanhonline.vn@gmail.com</a>
+                    </strong>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="copyright-img">
+                <a href="https://www.dmca.com/Protection/Status.aspx?ID=44079740-fb21-42e9-ad53-52e638aac17d&refurl=https://caycanhonline.vn/">
+                    <img src="/assets/img/copyright1.png" alt="">
+                </a>
+                <img src="/assets/img/copyright2.png" alt="">
+            </div>
+            <div class="copyright-text">
+                <p>Copyright 2023 © 
+                    <a href=""><span style="font-weight: 600; color: #000000;">Cây Cảnh Online</span></a>              
+                </p>
+            </div>
+        </div>
+    </footer>
+
+ 
+    <script>
+        $(document).ready(function(){
+            $('.dropdown-select').click(function(){
+                $(".searchresult-wrap .dropdown-select .list-dropdown").toggleClass('show');
+            })
+
+            $('.dropdown-menu1').click(function(){
+                $('.category-wrap-menu .category1 .dropdown-item').toggleClass('show');
+                $('.dropdown-menu1').toggleClass('rotate1');
+            });
+
+            $('.dropdown-menu2').click(function(){
+                $('.category-wrap-menu .category2 .dropdown-item').toggleClass('show');
+                $('.dropdown-menu2').toggleClass('rotate');
+            });
+
+            $('.dropdown-menu3').click(function(){
+                $('.category-wrap-menu .category3 .dropdown-item').toggleClass('show');
+                $('.dropdown-menu3').toggleClass('rotate');
+            })
+        })
+    </script>
+</body>
+</html>
